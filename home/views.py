@@ -208,7 +208,7 @@ def add_to_cart(request):
                 basket.qty += quantity
                 basket.amount = main.price * basket.qty
                 basket.save()
-                messages.success(request, format_html('one item added to cart... <a href="http://100.26.190.128/cart">views cart</a>'))
+                messages.success(request, format_html('one item added to cart... <a href="http://54.84.112.76/cart">views cart</a>'))
                 return redirect('home')
             else:
                 newitem = Cart()
@@ -219,7 +219,7 @@ def add_to_cart(request):
                 newitem.amount = main.price * quantity
                 newitem.paid = False
                 newitem.save()
-                messages.success(request,format_html('one item added to cart... <a href="http://100.26.190.128/cart">views cart</a>'))
+                messages.success(request,format_html('one item added to cart... <a href="http://54.84.112.76/cart">views cart</a>'))
                 return redirect('home')
         else:
             newcart = Cart()
